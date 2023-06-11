@@ -41,11 +41,13 @@ public class RegistrationActivity extends AppCompatActivity {
                 String email = edEmail.getText().toString();
                 String password = edPassword.getText().toString();
                 String confirmPassword = edConfirmPassword.getText().toString();
+                Database db = new Database(getApplicationContext(), "healthmate", null, 1);
                 if (name.length() == 0 || username.length() == 0 || email.length() == 0 || password.length() == 0 || confirmPassword.length() == 0) {
                     Toast.makeText(RegistrationActivity.this, "Please enter all fields", Toast.LENGTH_LONG).show();
                 } else {
                     if (password.compareTo(confirmPassword) == 0) {
                         if (isValid(password)) {
+                            db.registerUser(username, email, password);
                             Toast.makeText(RegistrationActivity.this, "Registration Successful", Toast.LENGTH_LONG).show();
                             startActivity(new Intent(RegistrationActivity.this, LoginActivity.class));
                         } else {
