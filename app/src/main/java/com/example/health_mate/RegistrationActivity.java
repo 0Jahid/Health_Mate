@@ -1,7 +1,5 @@
 package com.example.health_mate;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class RegistrationActivity extends AppCompatActivity {
     EditText edName, edUsername, edEmail, edPassword, edConfirmPassword;
@@ -43,17 +43,16 @@ public class RegistrationActivity extends AppCompatActivity {
                 String confirmPassword = edConfirmPassword.getText().toString();
                 if (name.length() == 0 || username.length() == 0 || email.length() == 0 || password.length() == 0 || confirmPassword.length() == 0) {
                     Toast.makeText(RegistrationActivity.this, "Please enter all fields", Toast.LENGTH_LONG).show();
-                } else{
-                    if (password.compareTo(confirmPassword)==0) {
-                        if(isValid(password)){
+                } else {
+                    if (password.compareTo(confirmPassword) == 0) {
+                        if (isValid(password)) {
                             Toast.makeText(RegistrationActivity.this, "Registration Successful", Toast.LENGTH_LONG).show();
                             startActivity(new Intent(RegistrationActivity.this, LoginActivity.class));
-                        }
-                        else{
+                        } else {
                             Toast.makeText(RegistrationActivity.this, "Password must contain at least 8 characters, 1 uppercase letter, 1 lowercase letter and 1 number", Toast.LENGTH_LONG).show();
                         }
                     } else {
-                        Toast.makeText(RegistrationActivity.this, "Registration Successful", Toast.LENGTH_LONG).show();
+                        Toast.makeText(RegistrationActivity.this, "Password and Confirm Password didn't match", Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -64,23 +63,19 @@ public class RegistrationActivity extends AppCompatActivity {
         int f1 = 0, f2 = 0, f3 = 0;
         if (passwordhere.length() < 8) {
             return false;
-        }
-        else {
+        } else {
             for (int i = 0; i < passwordhere.length(); i++) {
                 if (passwordhere.charAt(i) >= 'a' && passwordhere.charAt(i) <= 'z') {
                     f1 = 1;
-                }
-                else if (passwordhere.charAt(i) >= 'A' && passwordhere.charAt(i) <= 'Z') {
+                } else if (passwordhere.charAt(i) >= 'A' && passwordhere.charAt(i) <= 'Z') {
                     f2 = 1;
-                }
-                else if (passwordhere.charAt(i) >= '0' && passwordhere.charAt(i) <= '9') {
+                } else if (passwordhere.charAt(i) >= '0' && passwordhere.charAt(i) <= '9') {
                     f3 = 1;
                 }
             }
             if (f1 == 1 && f2 == 1 && f3 == 1) {
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
         }
