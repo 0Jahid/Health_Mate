@@ -37,7 +37,7 @@
         app:layout_constraintStart_toStartOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editTextRegName"
+        android:id="@+id/editTextAppFullName"
         android:layout_width="342dp"
         android:layout_height="48dp"
         android:layout_marginTop="124dp"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/editTextRegisterPassword"
+        android:id="@+id/editTextAppNumber"
         android:layout_width="342dp"
         android:layout_height="48dp"
         android:layout_marginBottom="40dp"
@@ -76,22 +76,22 @@
         android:paddingBottom="10dp"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite"
-        app:layout_constraintBottom_toTopOf="@+id/buttonRegister"
-        app:layout_constraintEnd_toEndOf="@+id/editTextRegName"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBookAppointment"
+        app:layout_constraintEnd_toEndOf="@+id/editTextAppFullName"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextRegName" />
+        app:layout_constraintStart_toStartOf="@+id/editTextAppFullName" />
 
     <Button
-        android:id="@+id/buttonRegister"
+        android:id="@+id/buttonBookAppointment"
         android:layout_width="153dp"
         android:layout_height="54dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/btn_bg"
         android:text="Login"
         app:layout_constraintBottom_toTopOf="@+id/textViewExistingUser"
-        app:layout_constraintEnd_toEndOf="@+id/editTextRegisterPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextAppNumber"
         app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="@+id/editTextRegisterPassword" />
+        app:layout_constraintStart_toStartOf="@+id/editTextAppNumber" />
 
     <TextView
         android:id="@+id/textViewExistingUser"
@@ -101,7 +101,7 @@
         android:text="Register for new account"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/buttonRegister"
+        app:layout_constraintEnd_toEndOf="@+id/buttonBookAppointment"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/buttonRegister" />
+        app:layout_constraintStart_toStartOf="@+id/buttonBookAppointment" />
 </androidx.constraintlayout.widget.ConstraintLayout>

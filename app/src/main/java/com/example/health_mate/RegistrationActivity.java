@@ -19,12 +19,12 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-        edName = findViewById(R.id.editTextRegName);
+        edName = findViewById(R.id.editTextAppFullName);
         edUsername = findViewById(R.id.editTextRegUsername);
-        edEmail = findViewById(R.id.editTextRegEmail);
-        edPassword = findViewById(R.id.editTextRegisterPassword);
-        edConfirmPassword = findViewById(R.id.editTextRegisterConfirmPassword);
-        btnRegister = findViewById(R.id.buttonRegister);
+        edEmail = findViewById(R.id.editTextAppAddress);
+        edPassword = findViewById(R.id.editTextAppNumber);
+        edConfirmPassword = findViewById(R.id.editTextAppFees);
+        btnRegister = findViewById(R.id.buttonBookAppointment);
         tvExistingUser = findViewById(R.id.textViewExistingUser);
 
         tvExistingUser.setOnClickListener(new View.OnClickListener() {
