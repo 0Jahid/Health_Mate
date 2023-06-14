@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".CartLabActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="30dp"
+        android:text="HealthMate"
+        android:textColor="@color/purple_200"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewCartTItle"
+        app:layout_constraintStart_toStartOf="@+id/textViewCartTItle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textViewCartTItle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab test cart Item"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/listViewCart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/buttonOrderCart"
+        android:layout_width="156dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/btn_bg"
+        android:text="Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonbookBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/buttonbookBack"
+        android:layout_width="126dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/btn_bg"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonOrderCart"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/buttonCartDate"
+        style="?android:spinnerStyle"
+        android:layout_width="147dp"
+        android:layout_height="54dp"
+        android:text="15/06/23"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.878"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCartTItle"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="139dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="25dp"
+        android:text="Pick Date"
+        android:textAlignment="center"
+        android:textColor="@color/yellowLight"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toTopOf="@+id/buttonOrderCart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonCartDate"
+        app:layout_constraintTop_toBottomOf="@+id/listViewCart" />
+
+    <Button
+        android:id="@+id/buttonCartTIme"
+        style="?android:spinnerStyle"
+        android:layout_width="141dp"
+        android:layout_height="55dp"
+        android:text="10:00"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCartDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCartTItle"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="141dp"
+        android:layout_height="0dp"
+        android:text="Pick Time"
+        android:textAlignment="center"
+        android:textColor="@color/yellowLight"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCartTIme"
+        app:layout_constraintStart_toStartOf="@+id/buttonCartTIme"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <ListView
+        android:id="@+id/listViewCart"
+        android:layout_width="394dp"
+        android:layout_height="365dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="59dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCartTItle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

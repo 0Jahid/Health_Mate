@@ -35,6 +35,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new android.content.Intent(HomeActivity.this, FindDoctorActivity.class));
             }
         });
+        CardView labTest = findViewById(R.id.cardLabTest);
+        labTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new android.content.Intent(HomeActivity.this, LabTestActivity.class));
+            }
+        });
     }
 
 }
