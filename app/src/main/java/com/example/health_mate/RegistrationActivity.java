@@ -24,7 +24,7 @@ public class RegistrationActivity extends AppCompatActivity {
         edEmail = findViewById(R.id.editTextAppAddress);
         edPassword = findViewById(R.id.editTextAppNumber);
         edConfirmPassword = findViewById(R.id.editTextAppFees);
-        btnRegister = findViewById(R.id.buttonOrderCart);
+        btnRegister = findViewById(R.id.buttonCartLabCheckout);
         tvExistingUser = findViewById(R.id.textViewExistingUser);
 
         tvExistingUser.setOnClickListener(new View.OnClickListener() {

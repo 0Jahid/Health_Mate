@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         edUsername = findViewById(R.id.editTextAppFullName);
         edPassword = findViewById(R.id.editTextAppNumber);
-        btn = findViewById(R.id.buttonOrderCart);
+        btn = findViewById(R.id.buttonCartLabCheckout);
         tvRegister = findViewById(R.id.textViewExistingUser);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
